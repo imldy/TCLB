@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>腾讯云轻量应用服务器购买</title>
+    <script>
+        function pJson() {
+            const node = document.getElementsByName("itemDetails")[0];
+            let jsonText = node.value;
+            let jsonObj = JSON.parse(jsonText);
+            node.value = JSON.stringify(jsonObj, null, 2)
+        }
+    </script>
+    <style type="text/css">
+        .button {
+            width: 100px;
+            height: 50px;
+            color: rgb(255, 0, 0);
+        }
+    </style>
 </head>
 <body>
     <form action="https://buy.cloud.tencent.com/order/check?productFrom=xinbancvmgoumai" method="post">
@@ -12,9 +27,8 @@
             spellcheck="false" # 去除输入字符红色下划波浪线
             rows="45"
             cols="100"></textarea>
-        <input type="submit"
-        style="width:100px; height:50px; color: rgb(255, 0, 0);"
-        >
+        <input type="button" onclick="pJson()" class="button" value="格式化信息">
+        <input type="submit" class="button">
     </form>
     <p>Github Repository: <a href="https://github.com/imldy/TCLB">imldy/TCLB</a></p>
 </body>
