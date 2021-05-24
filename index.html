@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ZH-CN">
+
 <head>
     <meta charset="UTF-8">
     <title>腾讯云轻量应用服务器购买</title>
@@ -19,17 +20,17 @@
         }
     </style>
 </head>
+
 <body>
     <form action="https://buy.cloud.tencent.com/order/check?productFrom=xinbancvmgoumai" method="post">
         <!-- <input type="text" name="itemDetails"> -->
         <p>服务器信息（抓包获得的Json格式文本）：</p>
-        <textarea name="itemDetails"
-            spellcheck="false" # 去除输入字符红色下划波浪线
-            rows="45"
-            cols="100"></textarea>
+        <!-- spellcheck="false" 去除输入字符红色下划波浪线 -->
+        <textarea name="itemDetails" spellcheck="false" rows="45" cols="100"></textarea>
         <input type="button" onclick="pJson()" class="button" value="格式化信息">
         <input type="submit" class="button">
     </form>
     <p>Github Repository: <a href="https://github.com/imldy/TCLB">imldy/TCLB</a></p>
 </body>
+
 </html>
